@@ -17,7 +17,6 @@ import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
@@ -30,7 +29,7 @@ import pt.iade.ei.gamestore.ui.classes.GameData
 import pt.iade.ei.gamestore.ui.components.GameCard
 import pt.iade.ei.gamestore.ui.components.NavBar
 import pt.iade.ei.gamestore.ui.controllers.getGames
-import pt.iade.ei.gamestore.ui.theme.AppBackground
+import pt.iade.ei.gamestore.ui.theme.AppBackgroundColor
 import pt.iade.ei.gamestore.ui.theme.GameStoreTheme
 
 class MainActivity : ComponentActivity() {
@@ -105,7 +104,7 @@ fun MainScreen(onGameClick: (GameData) -> Unit) {
         LazyColumn(
             modifier = Modifier
                 .fillMaxSize()
-                .background(AppBackground)
+                .background(AppBackgroundColor)
                 .padding(top = 250.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {

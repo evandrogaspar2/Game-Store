@@ -8,10 +8,8 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -42,9 +40,8 @@ import pt.iade.ei.gamestore.ui.classes.GameData
 import pt.iade.ei.gamestore.ui.components.DlcBottomSheet
 import pt.iade.ei.gamestore.ui.components.GameDlcBox
 import pt.iade.ei.gamestore.ui.components.GameInfoBox
-import pt.iade.ei.gamestore.ui.controllers.dlcGames
 import pt.iade.ei.gamestore.ui.controllers.getDlcGames
-import pt.iade.ei.gamestore.ui.theme.AppBackground
+import pt.iade.ei.gamestore.ui.theme.AppBackgroundColor
 import pt.iade.ei.gamestore.ui.theme.GameStoreTheme
 
 class GameDetailActivity : ComponentActivity() {
@@ -98,7 +95,7 @@ fun GameDetailScreen(
             ModalBottomSheet(
                 onDismissRequest = { showSheet = false },
                 sheetState = sheetState,
-                containerColor = AppBackground
+                containerColor = AppBackgroundColor
             ) {
                 DlcBottomSheet(
                     dlc = dlc,
@@ -119,7 +116,7 @@ fun GameDetailScreen(
         topBar = {
             Box(
                 Modifier
-                    .background(AppBackground)
+                    .background(AppBackgroundColor)
                     .fillMaxWidth()
                     .padding(12.dp)
             ) {
@@ -149,7 +146,7 @@ fun GameDetailScreen(
         LazyColumn(
             modifier = Modifier
                 .fillMaxSize()
-                .background(AppBackground)
+                .background(AppBackgroundColor)
                 .padding(padding)
                 .padding(horizontal = 12.dp, vertical = 10.dp),
             verticalArrangement = Arrangement.spacedBy(20.dp)
