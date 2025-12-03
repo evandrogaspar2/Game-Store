@@ -2,6 +2,7 @@ package pt.iade.ei.gamestore.ui.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -29,11 +30,14 @@ import androidx.compose.ui.unit.sp
 import pt.iade.ei.gamestore.ui.classes.DlcData
 
 @Composable
-fun GameDlcBox(dlc: DlcData) {
+fun GameDlcBox(
+    dlc: DlcData,
+    onClick: () -> Unit
+) {
         Row(
             modifier = Modifier
-                .fillMaxWidth(),
-
+                .fillMaxWidth()
+                .clickable{ onClick() },
             verticalAlignment = Alignment.CenterVertically
         ) {
             Box(
@@ -41,7 +45,8 @@ fun GameDlcBox(dlc: DlcData) {
                     .size(120.dp)
                     .clip( RoundedCornerShape(12.dp)),
                 contentAlignment = Alignment.Center
-            ) {
+            )
+            {
                 Image(
                     painter = painterResource(id = dlc.image),
                     contentDescription = "Image",
@@ -52,7 +57,10 @@ fun GameDlcBox(dlc: DlcData) {
 
             Spacer(modifier = Modifier.width(16.dp))
 
-            Column(modifier = Modifier.weight(1f)) {
+            Column(
+                modifier = Modifier
+                    .weight(1f)
+            ) {
 
                 Text(
                     text = dlc.name,

@@ -28,7 +28,7 @@ val dlcGames = listOf(
         name = "Liars and Cheats Pack",
         description = "Jogos de salão, corridas de cavalos competitivas, PvP e novas armas.",
         price = 7.99,
-        image = R.drawable.rdr_liars_cheats_pack
+        image = R.drawable.rdr_liars_cheats
     ),
 
     // The Last of Us
@@ -38,23 +38,23 @@ val dlcGames = listOf(
         name = "Left Behind",
         description = "Expansão narrativa que mostra o passado de Ellie e a relação com Riley.",
         price = 9.99,
-        image = R.drawable.tlu_left_behind
+        image = R.drawable.tu_left_behind
     ),
     DlcData(
         id = 5,
         gameId = 2,
-        name = "Abandoned Territories Map Pack",
+        name = "Abandoned Territories",
         description = "Pacote multiplayer com quatro novos mapas intensos.",
         price = 5.99,
-        image = R.drawable.tlu_abandoned_territories
+        image = R.drawable.tu_abandoned_pack
     ),
     DlcData(
         id = 6,
         gameId = 2,
-        name = "Reclaimed Territories Map Pack",
+        name = "Reclaimed Territories",
         description = "Mais quatro mapas, novas armas e execuções no multiplayer.",
         price = 7.99,
-        image = R.drawable.tlu_reclaimed_territories
+        image = R.drawable.tu_reclaimed_pack
     ),
 
     // Black Ops Cold War
@@ -64,7 +64,7 @@ val dlcGames = listOf(
         name = "Zombies – Firebase Z",
         description = "Mapa Zombies numa base secreta no Vietname com novos inimigos.",
         price = 6.99,
-        image = R.drawable.cdb_firebasez
+        image = R.drawable.cd_zumbies_firebase
     ),
     DlcData(
         id = 8,
@@ -72,7 +72,7 @@ val dlcGames = listOf(
         name = "Zombies – Mauer der Toten",
         description = "Zombies em Berlim destruída com novas armas e exploração urbana.",
         price = 6.99,
-        image = R.drawable.cdb_zombies_mouer_toten
+        image = R.drawable.cd_mauer_der_toten
     ),
     DlcData(
         id = 9,
@@ -80,7 +80,7 @@ val dlcGames = listOf(
         name = "Zombies – Forsaken",
         description = "Capítulo final da Dark Aether numa cidade soviética experimental.",
         price = 6.99,
-        image = R.drawable.cdb_zombies_forsaken
+        image = R.drawable.cd_zombies_forsaken
     )
 )
 

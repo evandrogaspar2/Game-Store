@@ -24,7 +24,10 @@ import androidx.compose.ui.unit.sp
 import pt.iade.ei.gamestore.ui.classes.GameData
 
 @Composable
-fun GameCard(game: GameData, onClick: () -> Unit) {
+fun GameCard(
+    game: GameData,
+    onClick: () -> Unit
+) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
