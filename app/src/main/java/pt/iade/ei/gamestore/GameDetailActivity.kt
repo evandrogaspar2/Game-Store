@@ -32,14 +32,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import pt.iade.ei.gamestore.ui.classes.DlcData
-import pt.iade.ei.gamestore.ui.classes.GameData
-import pt.iade.ei.gamestore.ui.components.DlcBottomSheet
-import pt.iade.ei.gamestore.ui.components.GameDlcBox
-import pt.iade.ei.gamestore.ui.components.GameInfoBox
+import pt.iade.ei.gamestore.ui.modal.DlcData
+import pt.iade.ei.gamestore.ui.modal.GameData
+import pt.iade.ei.gamestore.ui.views.DlcBottomSheet
+import pt.iade.ei.gamestore.ui.views.GameDlcBox
+import pt.iade.ei.gamestore.ui.views.GameInfoBox
 import pt.iade.ei.gamestore.ui.controllers.getDlcGames
 import pt.iade.ei.gamestore.ui.theme.AppBackgroundColor
 import pt.iade.ei.gamestore.ui.theme.GameStoreTheme
@@ -88,8 +89,6 @@ fun GameDetailScreen(
     val sheetState = rememberModalBottomSheetState(
         skipPartiallyExpanded = true
     )
-
-    // Mostra o ModalBottomSheet quando showSheet = true
     if (showSheet) {
         selectedDlc?.let { dlc ->
             ModalBottomSheet(
@@ -161,7 +160,7 @@ fun GameDetailScreen(
                         .padding(start = 2.dp )
                 ){
                     Text(
-                        text = "Purchasable items",
+                        text = stringResource(R.string.purchasable_item),
                         fontSize = 22.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color.Black

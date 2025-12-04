@@ -1,7 +1,7 @@
 package pt.iade.ei.gamestore.ui.controllers
 
 import pt.iade.ei.gamestore.R
-import pt.iade.ei.gamestore.ui.classes.GameData
+import pt.iade.ei.gamestore.ui.modal.GameData
 
 val games = listOf(
     GameData(

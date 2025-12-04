@@ -22,12 +22,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import pt.iade.ei.gamestore.ui.classes.GameData
-import pt.iade.ei.gamestore.ui.components.GameCard
-import pt.iade.ei.gamestore.ui.components.NavBar
+import pt.iade.ei.gamestore.ui.modal.GameData
+import pt.iade.ei.gamestore.ui.views.GameCard
+import pt.iade.ei.gamestore.ui.views.NavBar
 import pt.iade.ei.gamestore.ui.controllers.getGames
 import pt.iade.ei.gamestore.ui.theme.AppBackgroundColor
 import pt.iade.ei.gamestore.ui.theme.GameStoreTheme
@@ -52,10 +53,8 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen(onGameClick: (GameData) -> Unit) {
-
     var games by remember { mutableStateOf(emptyList<GameData>()) }
 
-    // Carrega a lista de jogos a partir do controller
     LaunchedEffect(Unit) {
         getGames { list -> games = list }
     }
@@ -88,7 +87,7 @@ fun MainScreen(onGameClick: (GameData) -> Unit) {
                 }
 
                 Text(
-                    text = "Evandro Games",
+                    text = stringResource(R.string.company_name),
                     fontWeight = FontWeight.Bold,
                     fontSize = 28.sp,
                     modifier = Modifier
@@ -97,8 +96,9 @@ fun MainScreen(onGameClick: (GameData) -> Unit) {
                 )
             }
         },
-
-        bottomBar = { NavBar() }
+        bottomBar = {
+            NavBar()
+        }
     ) { padding ->
 
         LazyColumn(

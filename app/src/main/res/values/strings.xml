@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">gameStore</string>
+    <string name="purchasable_item">Purchasable items</string>
+    <string name="company_name">Evandro Games</string>
 </resources>

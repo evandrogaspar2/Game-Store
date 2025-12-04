@@ -1,7 +1,6 @@
-package pt.iade.ei.gamestore.ui.components
+package pt.iade.ei.gamestore.ui.views
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -27,7 +26,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import pt.iade.ei.gamestore.ui.classes.DlcData
+import pt.iade.ei.gamestore.R
+import pt.iade.ei.gamestore.ui.modal.DlcData
 
 @Composable
 fun GameDlcBox(
@@ -97,8 +97,18 @@ fun GameDlcBox(
 
 
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 fun GameDlcBoxPreview() {
-    //GameDlcBox()
+        GameDlcBox(
+            dlc = DlcData(
+                id = 1,
+                gameId = 1,
+                name = "Item name",
+                description = "Descrição curta para visualizar o layout.",
+                price = 9.99,
+                image = R.drawable.preview_example
+            ),
+            onClick = {}
+        )
 }

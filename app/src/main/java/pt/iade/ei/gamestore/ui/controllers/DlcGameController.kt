@@ -1,7 +1,7 @@
 package pt.iade.ei.gamestore.ui.controllers
 
 import pt.iade.ei.gamestore.R
-import pt.iade.ei.gamestore.ui.classes.DlcData
+import pt.iade.ei.gamestore.ui.modal.DlcData
 
 val dlcGames = listOf(
 

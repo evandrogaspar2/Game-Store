@@ -1,4 +1,4 @@
-package pt.iade.ei.gamestore.ui.components
+package pt.iade.ei.gamestore.ui.views
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -21,7 +21,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import pt.iade.ei.gamestore.ui.classes.GameData
+import pt.iade.ei.gamestore.R
+import pt.iade.ei.gamestore.ui.modal.GameData
 
 @Composable
 fun GameCard(
@@ -60,8 +61,16 @@ fun GameCard(
     }
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 fun GameCardPreview() {
-   // GameCard()
+        GameCard(
+            game = GameData(
+                id = 1,
+                name = "Name of the name",
+                description = "",
+                image = R.drawable.call_of_duty
+            ),
+            onClick = {}
+        )
 }

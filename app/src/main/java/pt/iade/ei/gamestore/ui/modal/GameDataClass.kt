@@ -1,4 +1,4 @@
-package pt.iade.ei.gamestore.ui.classes
+package pt.iade.ei.gamestore.ui.modal
 
 import java.io.Serializable
 

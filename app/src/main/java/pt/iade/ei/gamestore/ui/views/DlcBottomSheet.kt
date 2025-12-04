@@ -1,4 +1,4 @@
-package pt.iade.ei.gamestore.ui.components
+package pt.iade.ei.gamestore.ui.views
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -22,9 +22,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import pt.iade.ei.gamestore.ui.classes.DlcData
+import pt.iade.ei.gamestore.R
+import pt.iade.ei.gamestore.ui.modal.DlcData
 import pt.iade.ei.gamestore.ui.theme.Purple40
 
 
@@ -103,4 +105,22 @@ fun DlcBottomSheet(
             }
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun DlcBottomSheetPreview() {
+    val fakeDlc = DlcData(
+        id = 1,
+        gameId = 1,
+        name = "Item name",
+        description = "Descrição curta para visualizar o layout do ModalBottomSheet. É mesmo assim bonito. Sei que gostaste.",
+        price = 9.99,
+        image = R.drawable.preview_example
+    )
+
+    DlcBottomSheet(
+        dlc = fakeDlc,
+        onBuyClick = {}
+    )
 }

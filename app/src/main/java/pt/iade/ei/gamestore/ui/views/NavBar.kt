@@ -1,4 +1,4 @@
-package pt.iade.ei.gamestore.ui.components
+package pt.iade.ei.gamestore.ui.views
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.ExitToApp
@@ -12,15 +12,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import pt.iade.ei.gamestore.ui.theme.NavBarBackgroundColor
 import pt.iade.ei.gamestore.ui.theme.NavBarSelectedColor
-import pt.iade.ei.gamestore.ui.theme.Purple80
-import pt.iade.ei.gamestore.ui.theme.PurpleGrey80
 
 
 @Composable
