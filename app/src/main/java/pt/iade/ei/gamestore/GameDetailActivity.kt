@@ -64,7 +64,7 @@ class GameDetailActivity : ComponentActivity() {
 
         setContent {
             GameStoreTheme {
-                GameDetailScreen(
+                GameDetailPage(
                     game = game,
                     dlcs = dlcs,
                     onBack = { finish() }
@@ -76,7 +76,7 @@ class GameDetailActivity : ComponentActivity() {
 
 @OptIn( ExperimentalMaterial3Api::class)
 @Composable
-fun GameDetailScreen(
+fun GameDetailPage(
     game: GameData,
     dlcs: List<DlcData>,
     onBack: () -> Unit

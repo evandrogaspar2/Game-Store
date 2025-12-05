@@ -39,7 +39,7 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             GameStoreTheme {
-                MainScreen(
+                MainPage(
                     onGameClick = { game ->
                         val intent = Intent(this, GameDetailActivity::class.java)
                         intent.putExtra("game", game)
@@ -52,7 +52,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun MainScreen(onGameClick: (GameData) -> Unit) {
+fun MainPage(onGameClick: (GameData) -> Unit) {
     var games by remember { mutableStateOf(emptyList<GameData>()) }
 
     LaunchedEffect(Unit) {

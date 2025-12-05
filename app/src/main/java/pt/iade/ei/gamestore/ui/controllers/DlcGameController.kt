@@ -5,7 +5,7 @@ import pt.iade.ei.gamestore.ui.modal.DlcData
 
 val dlcGames = listOf(
 
-    // Red Dead Redemption
+
     DlcData(
         id = 1,
         gameId = 1,
@@ -31,7 +31,6 @@ val dlcGames = listOf(
         image = R.drawable.rdr_liars_cheats
     ),
 
-    // The Last of Us
     DlcData(
         id = 4,
         gameId = 2,
@@ -57,7 +56,6 @@ val dlcGames = listOf(
         image = R.drawable.tu_reclaimed_pack
     ),
 
-    // Black Ops Cold War
     DlcData(
         id = 7,
         gameId = 3,
